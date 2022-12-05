@@ -5,19 +5,24 @@ canvas.width = 800;
 canvas.height = 800;
 
 
-ctx.rect(50, 50, 100, 100);
-ctx.rect(150, 150, 100, 100);
-ctx.rect(250, 250, 100, 100);
+/*
+* 집 모양 그려보기 canvas
+*/
+ctx.fillRect(100, 100, 50, 200);
+ctx.fillRect(400, 100, 50, 200);
+
+ctx.moveTo(150, 300);
+ctx.lineTo(450, 300);
+ctx.stroke();
+
+ctx.fillRect(250, 200, 50, 100);
+
+ctx.moveTo(150, 100);
+ctx.lineTo(400, 100);
+ctx.stroke();
+
+ctx.moveTo(100, 100);
+ctx.lineTo(275, 30);
+ctx.lineTo(450, 100);
 ctx.fill();
 
-ctx.beginPath();
-ctx.rect(350, 350, 100, 100);
-ctx.fillStyle = 'red';
-ctx.fill();
-
-ctx.closePath();
-
-ctx.beginPath();
-ctx.rect(450, 450, 100, 100);
-ctx.fillStyle = 'black';
-ctx.fill(); 
