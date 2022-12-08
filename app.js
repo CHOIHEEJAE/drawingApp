@@ -4,25 +4,22 @@ const ctx = canvas.getContext('2d'); // 그림을 그릴 수 있는 context 변�
 canvas.width = 800;
 canvas.height = 800;
 
+// click 시 선 그리기
 
-/*
-* 집 모양 그려보기 canvas
-*/
-ctx.fillRect(100, 100, 50, 200);
-ctx.fillRect(400, 100, 50, 200);
+const colors = [
+    "#18dcff",
+    "#7d5fff"
+]
 
-ctx.moveTo(150, 300);
-ctx.lineTo(450, 300);
-ctx.stroke();
+function onClick(event) {
+    ctx.beginPath();
+    let startPoint = Math.floor(Math.random() * canvas.width);
+    let endPoint = Math.floor(Math.random() * canvas.height);
+    ctx.moveTo(startPoint, endPoint);
+    ctx.lineTo(event.offsetX, event.offsetY);
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    ctx.strokeStyle = color;
+    ctx.stroke();
+}
 
-ctx.fillRect(250, 200, 50, 100);
-
-ctx.moveTo(150, 100);
-ctx.lineTo(400, 100);
-ctx.stroke();
-
-ctx.moveTo(100, 100);
-ctx.lineTo(275, 30);
-ctx.lineTo(450, 100);
-ctx.fill();
-
+canvas.addEventListener("mousemove", onClick)
