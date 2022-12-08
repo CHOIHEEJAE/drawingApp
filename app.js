@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d'); // 그림을 그릴 수 있는 context 변�
 canvas.width = 800;
 canvas.height = 800;
 
-// click 시 선 그리기
+// 마우스 이동에 따라 임의의 위치에 선 그리기
 
 const colors = [
     "#18dcff",
