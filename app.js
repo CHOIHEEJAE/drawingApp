@@ -8,7 +8,9 @@ canvas.height = 800;
 
 const colors = [
     "#18dcff",
-    "#7d5fff"
+    "#7d5fff",
+    "#935B5B",
+    "#E8DA55"
 ]
 
 function onClick(event) {
